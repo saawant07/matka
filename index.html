@@ -3,140 +3,254 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Matka Desi Delights - Milkshakes</title>
+    <title>Matka Desi Delights | Premium Milkshakes</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- Header -->
     <header>
-        <div class="header-container">
-            <div class="logo">
-                <div class="logo-circle">M</div>
-                <h1>Matka Desi Delights</h1>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <div class="logo-icon">
+                        <i class="fas fa-glass-whiskey"></i>
+                    </div>
+                    <div class="logo-text">
+                        <h1>Matka Desi Delights</h1>
+                        <p>Premium Milkshakes</p>
+                    </div>
+                </div>
+                
+                <nav class="nav-menu">
+                    <a href="#home" class="nav-link active">Home</a>
+                    <a href="#menu" class="nav-link">Our Menu</a>
+                    <a href="#about" class="nav-link">Our Story</a>
+                    <a href="#contact" class="nav-link">Contact</a>
+                    <a href="#order" class="nav-cta">Order Now</a>
+                </nav>
+                
+                <button class="menu-toggle" id="menuToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
             </div>
-            <button class="menu-toggle" id="menuToggle">
-                <i class="fas fa-bars"></i>
-            </button>
-            <nav class="nav-menu" id="navMenu">
-                <a href="#home">Home</a>
-                <a href="#milkshakes">Milkshakes</a>
-                <a href="#about">About</a>
-                <a href="#contact">Contact</a>
-            </nav>
         </div>
     </header>
 
     <!-- Hero Section -->
     <section class="hero" id="home">
-        <div class="hero-content">
-            <h2>Delicious Desi Milkshakes!</h2>
-            <p>Experience the authentic taste of traditional Indian flavors in our creamy, delightful milkshakes. Made with love and served in traditional matkas!</p>
-            <a href="#milkshakes" class="btn">Order Now</a>
-        </div>
-        <div class="hero-image">
-            <div class="milkshake-placeholder">🥤</div>
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">Experience <span class="highlight">Authentic</span> Indian Flavors</h1>
+                    <p class="hero-description">Crafted with premium ingredients and served in traditional matkas, our milkshakes bring you the perfect blend of heritage and taste.</p>
+                    <div class="hero-buttons">
+                        <a href="#menu" class="btn btn-primary">Explore Menu</a>
+                        <a href="#order" class="btn btn-secondary">
+                            <i class="fas fa-bolt"></i>
+                            Quick Order
+                        </a>
+                    </div>
+                    <div class="hero-stats">
+                        <div class="stat">
+                            <h3>4.9★</h3>
+                            <p>Customer Rating</p>
+                        </div>
+                        <div class="stat">
+                            <h3>50+</h3>
+                            <p>Flavors</p>
+                        </div>
+                        <div class="stat">
+                            <h3>15min</h3>
+                            <p>Delivery</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="floating-milkshake">
+                        <div class="milkshake-glass">
+                            <div class="drink" style="background: linear-gradient(to bottom, #FFD700, #FF8C00);"></div>
+                            <div class="topping">🥭</div>
+                        </div>
+                        <div class="matka-base"></div>
+                    </div>
+                    <div class="floating-element element-1">🍓</div>
+                    <div class="floating-element element-2">🥭</div>
+                    <div class="floating-element element-3">🍌</div>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- Features -->
     <section class="features">
-        <div class="feature">
-            <i class="fas fa-shipping-fast"></i>
-            <h3>Fast Delivery</h3>
-            <p>Get your milkshake delivered in 30 minutes</p>
-        </div>
-        <div class="feature">
-            <i class="fas fa-leaf"></i>
-            <h3>Fresh Ingredients</h3>
-            <p>Made with fresh fruits and natural ingredients</p>
-        </div>
-        <div class="feature">
-            <i class="fas fa-rupee-sign"></i>
-            <h3>Best Price</h3>
-            <p>Premium quality at affordable prices</p>
+        <div class="container">
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h3>Fresh Ingredients</h3>
+                    <p>We use only the freshest fruits and natural ingredients in every creation</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3>Quick Service</h3>
+                    <p>Your order prepared and delivered within 15-20 minutes guaranteed</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <h3>Premium Quality</h3>
+                    <p>Experience the finest milkshakes with authentic traditional recipes</p>
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- Milkshakes Section -->
-    <section class="milkshakes" id="milkshakes">
-        <h2>Our Signature Milkshakes</h2>
-        <div class="milkshake-grid">
-            <!-- Milkshake 1 -->
-            <div class="milkshake-card">
-                <div class="card-image">
-                    <div class="image-placeholder">🥭</div>
-                </div>
-                <div class="card-content">
-                    <h3>Mango Matka Shake</h3>
-                    <p>Fresh mangoes blended with creamy milk and cardamom</p>
-                    <div class="price">₹180</div>
-                    <button class="order-btn">Add to Cart</button>
-                </div>
+    <!-- Menu Section -->
+    <section class="menu" id="menu">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Premium Collection</h2>
+                <p>Discover our handcrafted milkshakes made with love and tradition</p>
             </div>
-
-            <!-- Milkshake 2 -->
-            <div class="milkshake-card">
-                <div class="card-image">
-                    <div class="image-placeholder">🍓</div>
-                </div>
-                <div class="card-content">
-                    <h3>Strawberry Desi Delight</h3>
-                    <p>Sweet strawberries with thick malai and rose syrup</p>
-                    <div class="price">₹160</div>
-                    <button class="order-btn">Add to Cart</button>
-                </div>
+            
+            <div class="menu-categories">
+                <button class="category-btn active">All Flavors</button>
+                <button class="category-btn">Fruit Specials</button>
+                <button class="category-btn">Classic Favorites</button>
+                <button class="category-btn">Seasonal</button>
             </div>
+            
+            <div class="menu-grid">
+                <!-- Product 1 -->
+                <div class="product-card">
+                    <div class="product-badge">Bestseller</div>
+                    <div class="product-image">
+                        <div class="image-placeholder" style="background: linear-gradient(135deg, #FFD700, #FF8C00);">
+                            🥭
+                        </div>
+                    </div>
+                    <div class="product-content">
+                        <h3>Royal Mango Delight</h3>
+                        <p>Alphonso mangoes blended with creamy milk and a hint of cardamom</p>
+                        <div class="product-footer">
+                            <div class="price">₹199</div>
+                            <button class="add-to-cart">
+                                <i class="fas fa-plus"></i>
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
 
-            <!-- Milkshake 3 -->
-            <div class="milkshake-card">
-                <div class="card-image">
-                    <div class="image-placeholder">🍌</div>
+                <!-- Product 2 -->
+                <div class="product-card">
+                    <div class="product-badge trending">Trending</div>
+                    <div class="product-image">
+                        <div class="image-placeholder" style="background: linear-gradient(135deg, #FF6B6B, #FF8E8E);">
+                            🍓
+                        </div>
+                    </div>
+                    <div class="product-content">
+                        <h3>Strawberry Heritage</h3>
+                        <p>Fresh strawberries with rose syrup and traditional malai topping</p>
+                        <div class="product-footer">
+                            <div class="price">₹179</div>
+                            <button class="add-to-cart">
+                                <i class="fas fa-plus"></i>
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
                 </div>
-                <div class="card-content">
-                    <h3>Banana Badam Shake</h3>
-                    <p>Ripe bananas with almonds, saffron, and honey</p>
-                    <div class="price">₹170</div>
-                    <button class="order-btn">Add to Cart</button>
-                </div>
-            </div>
 
-            <!-- Milkshake 4 -->
-            <div class="milkshake-card">
-                <div class="card-image">
-                    <div class="image-placeholder">🍫</div>
+                <!-- Product 3 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <div class="image-placeholder" style="background: linear-gradient(135deg, #FFA726, #FFB74D);">
+                            🍌
+                        </div>
+                    </div>
+                    <div class="product-content">
+                        <h3>Banana Almond Bliss</h3>
+                        <p>Ripe bananas with crushed almonds, saffron, and organic honey</p>
+                        <div class="product-footer">
+                            <div class="price">₹189</div>
+                            <button class="add-to-cart">
+                                <i class="fas fa-plus"></i>
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
                 </div>
-                <div class="card-content">
-                    <h3>Chocolate Kesar Shake</h3>
-                    <p>Rich chocolate with kesar and pistachios</p>
-                    <div class="price">₹190</div>
-                    <button class="order-btn">Add to Cart</button>
-                </div>
-            </div>
 
-            <!-- Milkshake 5 -->
-            <div class="milkshake-card">
-                <div class="card-image">
-                    <div class="image-placeholder">🥥</div>
+                <!-- Product 4 -->
+                <div class="product-card">
+                    <div class="product-badge new">New</div>
+                    <div class="product-image">
+                        <div class="image-placeholder" style="background: linear-gradient(135deg, #8B4513, #A0522D);">
+                            🍫
+                        </div>
+                    </div>
+                    <div class="product-content">
+                        <h3>Chocolate Saffron Indulgence</h3>
+                        <p>Premium chocolate with kesar and crushed pistachios</p>
+                        <div class="product-footer">
+                            <div class="price">₹219</div>
+                            <button class="add-to-cart">
+                                <i class="fas fa-plus"></i>
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
                 </div>
-                <div class="card-content">
-                    <h3>Coconut Nariyal Shake</h3>
-                    <p>Fresh coconut with milk and jaggery</p>
-                    <div class="price">₹150</div>
-                    <button class="order-btn">Add to Cart</button>
-                </div>
-            </div>
 
-            <!-- Milkshake 6 -->
-            <div class="milkshake-card">
-                <div class="card-image">
-                    <div class="image-placeholder">🌹</div>
+                <!-- Product 5 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <div class="image-placeholder" style="background: linear-gradient(135deg, #FFF8E1, #FFECB3);">
+                            🥥
+                        </div>
+                    </div>
+                    <div class="product-content">
+                        <h3>Coconut Elixir</h3>
+                        <p>Fresh coconut water and pulp with organic jaggery</p>
+                        <div class="product-footer">
+                            <div class="price">₹169</div>
+                            <button class="add-to-cart">
+                                <i class="fas fa-plus"></i>
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
                 </div>
-                <div class="card-content">
-                    <h3>Rose Lassi Shake</h3>
-                    <p>Traditional lassi with rose petals and kewra</p>
-                    <div class="price">₹140</div>
-                    <button class="order-btn">Add to Cart</button>
+
+                <!-- Product 6 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <div class="image-placeholder" style="background: linear-gradient(135deg, #F8BBD0, #F48FB1);">
+                            🌹
+                        </div>
+                    </div>
+                    <div class="product-content">
+                        <h3>Rose Petal Lassi</h3>
+                        <p>Traditional lassi with rose petals and kewra essence</p>
+                        <div class="product-footer">
+                            <div class="price">₹159</div>
+                            <button class="add-to-cart">
+                                <i class="fas fa-plus"></i>
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -144,82 +258,173 @@
 
     <!-- About Section -->
     <section class="about" id="about">
-        <div class="about-content">
-            <h2>About Matka Desi Delights</h2>
-            <p>We bring authentic Indian flavors to your glass with our traditional recipes served in eco-friendly matkas.</p>
-            <p>Founded in 2020, we've been serving happiness in a glass with our unique desi twist on classic milkshakes.</p>
-            <div class="stats">
-                <div class="stat">
-                    <h3>5000+</h3>
-                    <p>Happy Customers</p>
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>Our Heritage Story</h2>
+                    <p>Founded with a passion for authentic Indian flavors, Matka Desi Delights brings generations of traditional recipes to modern milkshake lovers. Each creation is a celebration of India's rich culinary heritage.</p>
+                    
+                    <div class="about-features">
+                        <div class="about-feature">
+                            <i class="fas fa-heart"></i>
+                            <div>
+                                <h4>Made with Love</h4>
+                                <p>Every milkshake is crafted with care and traditional methods</p>
+                            </div>
+                        </div>
+                        <div class="about-feature">
+                            <i class="fas fa-seedling"></i>
+                            <div>
+                                <h4>Eco-Friendly</h4>
+                                <p>Served in biodegradable matkas that enhance flavor naturally</p>
+                            </div>
+                        </div>
+                        <div class="about-feature">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <h4>Fresh Daily</h4>
+                                <p>Prepared fresh throughout the day with no preservatives</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <a href="#contact" class="btn btn-outline">Visit Our Store</a>
                 </div>
-                <div class="stat">
-                    <h3>50+</h3>
-                    <p>Varieties</p>
-                </div>
-                <div class="stat">
-                    <h3>15 min</h3>
-                    <p>Avg. Delivery Time</p>
+                <div class="about-visual">
+                    <div class="visual-card">
+                        <div class="card-content">
+                            <h3>Traditional Meets Modern</h3>
+                            <p>Experience the perfect fusion of authentic recipes with contemporary presentation</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section class="contact" id="contact">
-        <h2>Contact Us</h2>
-        <div class="contact-container">
-            <div class="contact-info">
-                <div class="contact-item">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <p>123 Flavor Street, Taste City</p>
-                </div>
-                <div class="contact-item">
-                    <i class="fas fa-phone"></i>
-                    <p>+91 98765 43210</p>
-                </div>
-                <div class="contact-item">
-                    <i class="fas fa-envelope"></i>
-                    <p>info@matkadelights.com</p>
-                </div>
-                <div class="social-links">
-                    <a href="#"><i class="fab fa-facebook"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+    <!-- CTA Section -->
+    <section class="cta" id="order">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Taste Happiness?</h2>
+                <p>Download our app for exclusive offers and faster ordering</p>
+                <div class="cta-buttons">
+                    <button class="btn btn-white">
+                        <i class="fab fa-google-play"></i>
+                        Google Play
+                    </button>
+                    <button class="btn btn-white">
+                        <i class="fab fa-apple"></i>
+                        App Store
+                    </button>
                 </div>
             </div>
-            <form class="contact-form">
-                <input type="text" placeholder="Your Name" required>
-                <input type="email" placeholder="Your Email" required>
-                <input type="tel" placeholder="Your Phone">
-                <textarea placeholder="Your Message" rows="4" required></textarea>
-                <button type="submit" class="btn">Send Message</button>
-            </form>
         </div>
     </section>
 
     <!-- Footer -->
     <footer>
-        <div class="footer-content">
-            <div class="footer-logo">
-                <div class="logo-circle">M</div>
-                <h3>Matka Desi Delights</h3>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-glass-whiskey"></i>
+                        <div>
+                            <h3>Matka Desi Delights</h3>
+                            <p>Premium Milkshakes</p>
+                        </div>
+                    </div>
+                    <p class="footer-description">Bringing authentic Indian flavors to your glass with tradition and taste.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <a href="#home">Home</a>
+                    <a href="#menu">Our Menu</a>
+                    <a href="#about">Our Story</a>
+                    <a href="#contact">Contact</a>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <div class="contact-info">
+                        <p><i class="fas fa-map-marker-alt"></i> 123 Flavor Street, Taste City</p>
+                        <p><i class="fas fa-phone"></i> +91 98765 43210</p>
+                        <p><i class="fas fa-envelope"></i> hello@matkadelights.com</p>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Opening Hours</h4>
+                    <div class="opening-hours">
+                        <p>Monday - Sunday: 10:00 AM - 11:00 PM</p>
+                        <p>Delivery: 10:00 AM - 10:30 PM</p>
+                    </div>
+                </div>
             </div>
-            <p>&copy; 2023 Matka Desi Delights. All rights reserved.</p>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2023 Matka Desi Delights. All rights reserved.</p>
+            </div>
         </div>
     </footer>
 
     <script>
         // Mobile menu toggle
         document.getElementById('menuToggle').addEventListener('click', function() {
-            document.getElementById('navMenu').classList.toggle('active');
+            this.classList.toggle('active');
+            document.querySelector('.nav-menu').classList.toggle('active');
         });
 
-        // Simple cart functionality
-        document.querySelectorAll('.order-btn').forEach(button => {
+        // Category buttons
+        document.querySelectorAll('.category-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                document.querySelectorAll('.category-btn').forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+
+        // Add to cart functionality
+        document.querySelectorAll('.add-to-cart').forEach(button => {
             button.addEventListener('click', function() {
-                const milkshakeName = this.parentElement.querySelector('h3').textContent;
-                alert(`Added ${milkshakeName} to your cart!`);
+                const productName = this.closest('.product-card').querySelector('h3').textContent;
+                this.innerHTML = '<i class="fas fa-check"></i> Added';
+                this.style.background = '#4CAF50';
+                
+                setTimeout(() => {
+                    this.innerHTML = '<i class="fas fa-plus"></i> Add to Cart';
+                    this.style.background = '';
+                }, 2000);
+                
+                // Show notification
+                const notification = document.createElement('div');
+                notification.className = 'notification';
+                notification.innerHTML = `Added ${productName} to cart!`;
+                document.body.appendChild(notification);
+                
+                setTimeout(() => {
+                    notification.remove();
+                }, 3000);
+            });
+        });
+
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
             });
         });
     </script>

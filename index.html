@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matka Desi Delights - Milkshakes</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <div class="logo-circle">M</div>
+            <h1>Matka Desi Delights</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#milkshakes">Milkshakes</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero" id="home">
+        <div class="bubble" style="width: 80px; height: 80px; top: 10%; left: 10%;"></div>
+        <div class="bubble" style="width: 60px; height: 60px; top: 20%; right: 15%;"></div>
+        <div class="bubble" style="width: 100px; height: 100px; bottom: 10%; left: 20%;"></div>
+        <div class="bubble" style="width: 70px; height: 70px; bottom: 20%; right: 10%;"></div>
+        
+        <h2>Delicious Desi Milkshakes!</h2>
+        <p>Experience the authentic taste of traditional Indian flavors in our creamy, delightful milkshakes. Made with love and served in traditional matkas!</p>
+        <a href="#milkshakes" class="btn">Explore Our Shakes</a>
+    </section>
+
+    <section id="milkshakes">
+        <h2 class="section-title">Our Signature Milkshakes</h2>
+        <div class="milkshake-container">
+            <div class="milkshake">
+                <div class="milkshake-img">🥭</div>
+                <h3>Mango Matka Shake</h3>
+                <p>Fresh mangoes blended with creamy milk and a hint of cardamom, served in a traditional matka.</p>
+                <p class="price">₹180</p>
+            </div>
+            <div class="milkshake">
+                <div class="milkshake-img">🍓</div>
+                <h3>Strawberry Desi Delight</h3>
+                <p>Sweet strawberries mixed with thick malai and rose syrup for a refreshing treat.</p>
+                <p class="price">₹160</p>
+            </div>
+            <div class="milkshake">
+                <div class="milkshake-img">🍌</div>
+                <h3>Banana Badam Shake</h3>
+                <p>Ripe bananas blended with almonds, saffron, and honey for a nutritious delight.</p>
+                <p class="price">₹170</p>
+            </div>
+            <div class="milkshake">
+                <div class="milkshake-img">🍫</div>
+                <h3>Chocolate Kesar Shake</h3>
+                <p>Rich chocolate combined with kesar (saffron) and pistachios for a royal experience.</p>
+                <p class="price">₹190</p>
+            </div>
+            <div class="milkshake">
+                <div class="milkshake-img">🥥</div>
+                <h3>Coconut Nariyal Shake</h3>
+                <p>Fresh coconut water and pulp blended with milk and jaggery for a tropical taste.</p>
+                <p class="price">₹150</p>
+            </div>
+            <div class="milkshake">
+                <div class="milkshake-img">🌹</div>
+                <h3>Rose Lassi Shake</h3>
+                <p>Traditional lassi with a twist of rose petals and kewra essence for a fragrant experience.</p>
+                <p class="price">₹140</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <h2>About Matka Desi Delights</h2>
+        <p>At Matka Desi Delights, we believe in bringing the authentic taste of India to your glass. Our milkshakes are crafted with traditional recipes, using fresh ingredients and served in eco-friendly matkas (clay pots) that enhance the flavor and keep your drink cool.</p>
+        <p>Founded in 2020, we've been serving happiness in a glass with our unique desi twist on classic milkshakes. Come visit us and experience the taste of tradition!</p>
+    </section>
+
+    <section class="contact" id="contact">
+        <h2>Contact Us</h2>
+        <form class="contact-form">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" rows="5" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <footer>
+        <div class="social-icons">
+            <a href="#">📘</a>
+            <a href="#">📷</a>
+            <a href="#">🐦</a>
+            <a href="#">📺</a>
+        </div>
+        <p>© 2023 Matka Desi Delights. All rights reserved.</p>
+        <p>123 Flavor Street, Taste City | Phone: +91 98765 43210 | Email: info@matkadelights.com</p>
+    </footer>
+
+    <script>
+        // Add floating bubbles dynamically
+        document.addEventListener('DOMContentLoaded', function() {
+            const heroSection = document.querySelector('.hero');
+            for (let i = 0; i < 8; i++) {
+                const bubble = document.createElement('div');
+                bubble.classList.add('bubble');
+                const size = Math.random() * 60 + 40;
+                bubble.style.width = `${size}px`;
+                bubble.style.height = `${size}px`;
+                bubble.style.left = `${Math.random() * 100}%`;
+                bubble.style.top = `${Math.random() * 100}%`;
+                bubble.style.animationDuration = `${Math.random() * 10 + 10}s`;
+                bubble.style.animationDelay = `${Math.random() * 5}s`;
+                heroSection.appendChild(bubble);
+            }
+        });
+    </script>
+</body>
+</html>

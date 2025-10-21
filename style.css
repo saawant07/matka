@@ -143,7 +143,7 @@ body::before {
     transform: translateY(-2px);
 }
 
-/* --- MODIFIED: Background Elements --- */
+/* Background Elements (Blobs) */
 .background-elements {
     position: fixed;
     top: 0;
@@ -154,16 +154,14 @@ body::before {
     overflow: hidden;
 }
 
-/* Base style for the new "blobs" */
 .bg-circle {
     position: absolute;
-    opacity: 0.8; /* Made them more visible (was 0.08) */
+    opacity: 0.8; /* Made them more visible */
     animation: float 25s infinite ease-in-out;
-    filter: blur(50px); /* Increased blur to make them softer */
+    filter: blur(50px); /* Soft blur */
     z-index: -1;
 }
 
-/* Blob 1 */
 .circle-1 {
     width: 400px;
     height: 400px;
@@ -173,7 +171,6 @@ body::before {
     border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
 }
 
-/* Blob 2 */
 .circle-2 {
     width: 300px;
     height: 300px;
@@ -184,7 +181,6 @@ body::before {
     border-radius: 60% 40% 30% 70% / 50% 60% 40% 50%;
 }
 
-/* Blob 3 */
 .circle-3 {
     width: 250px;
     height: 250px;
@@ -195,7 +191,6 @@ body::before {
     border-radius: 30% 70% 50% 50% / 60% 40% 50% 40%;
 }
 
-/* Blob 4 */
 .circle-4 {
     width: 350px;
     height: 350px;
@@ -205,8 +200,6 @@ body::before {
     background: linear-gradient(135deg, #A886B7, #8c6a9c);
     border-radius: 50% 50% 30% 70% / 40% 60% 30% 60%;
 }
-
-/* --- END OF MODIFIED SECTION --- */
 
 @keyframes float {
     0%, 100% { 
@@ -348,7 +341,6 @@ body::before {
     gap: 12px;
 }
 
-/* Header Logo Size */
 .logo-image .logo-img {
     max-height: 70px;
     width: auto;
@@ -381,37 +373,34 @@ body::before {
     color: rgba(255, 255, 255, 0.8);
 }
 
-/* Nav Menu Pill Bar */
 .nav-menu {
     display: flex;
     align-items: center;
-    gap: 0.5rem; /* Adjusts space between links */
-    background: rgba(45, 48, 71, 0.25); /* A dark, glassy background */
+    gap: 0.5rem; 
+    background: rgba(45, 48, 71, 0.25); 
     border: 1px solid var(--glass-border);
-    border-radius: 50px; /* This makes the container a "pill" */
-    padding: 0.5rem; /* Padding inside the bar */
+    border-radius: 50px; 
+    padding: 0.5rem; 
     transition: var(--transition);
 }
 
-/* Nav Link Style */
 .nav-link {
     text-decoration: none;
-    color: rgba(255, 255, 255, 0.8); /* Make non-active links slightly dimmer */
+    color: rgba(255, 255, 255, 0.8); 
     font-weight: 500;
     transition: var(--transition);
     position: relative;
     padding: 8px 16px;
-    border-radius: 25px; /* Ensures the active background is also rounded */
-    background: transparent; /* Remove individual backgrounds by default */
+    border-radius: 25px; 
+    background: transparent; 
 }
 
-/* Nav Link Hover/Active State */
 .nav-link:hover {
     color: var(--white);
 }
 
 .nav-link.active {
-    background: var(--primary-dark); /* Using your theme's dark purple */
+    background: var(--primary-dark); 
     color: var(--white);
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 }
@@ -482,7 +471,6 @@ body::before {
     align-items: center;
 }
 
-/* Hero Logo Size */
 .hero-logo-img {
     max-width: 400px;
     width: 100%;
@@ -518,85 +506,6 @@ body::before {
     display: flex;
     gap: 1rem;
     margin-bottom: 3rem;
-}
-
-/* Featured Drink (Original Placeholder) */
-/* This can be deleted, but is harmless */
-.featured-drink {
-    padding: 2rem;
-    text-align: center;
-    max-width: 300px;
-    margin: 0 auto;
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.1));
-    border: 1px solid rgba(255, 255, 255, 0.3);
-}
-
-.drink-visual {
-    position: relative;
-    margin-bottom: 1.5rem;
-}
-
-.milkshake-glass {
-    width: 120px;
-    height: 180px;
-    margin: 0 auto;
-    position: relative;
-}
-
-.glass-top {
-    width: 100px;
-    height: 20px;
-    background: rgba(255, 255, 255, 0.9);
-    border-radius: 50px 50px 0 0;
-    margin: 0 auto;
-    position: relative;
-    z-index: 2;
-}
-
-.drink-content {
-    width: 100px;
-    height: 140px;
-    margin: -10px auto 0;
-    border-radius: 0 0 50px 50px;
-    position: relative;
-    z-index: 1;
-}
-
-.glass-bottom {
-    width: 120px;
-    height: 20px;
-    background: rgba(255, 255, 255, 0.7);
-    border-radius: 0 0 60px 60px;
-    margin: -10px auto 0;
-    position: relative;
-    z-index: 0;
-}
-
-.drink-topping {
-    position: absolute;
-    top: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 1.5rem;
-    color: var(--white);
-    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
-}
-
-.drink-info h3 {
-    margin-bottom: 0.5rem;
-    color: var(--white);
-}
-
-.drink-info p {
-    color: rgba(255, 255, 255, 0.8);
-    margin-bottom: 1rem;
-    font-size: 0.9rem;
-}
-
-.price {
-    font-size: 1.5rem;
-    font-weight: 600;
-    color: var(--vibrant-2);
 }
 
 /* Features Section */
@@ -684,7 +593,11 @@ body::before {
     color: rgba(255, 255, 255, 0.8);
 }
 
-/* Menu Section */
+/* =======================================================
+NEW BANNER CAROUSEL STYLES
+=======================================================
+*/
+
 .menu-section {
     padding: 80px 0;
     position: relative;
@@ -705,51 +618,30 @@ body::before {
     z-index: -1;
 }
 
-.menu-categories {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    margin-bottom: 3rem;
-    flex-wrap: wrap;
-}
-
-.category-filter {
-    padding: 12px 24px;
-    background: transparent;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    color: var(--white);
-    border-radius: 25px;
-    cursor: pointer;
-    transition: var(--transition);
-    font-weight: 500;
-    border: none;
-    backdrop-filter: blur(10px);
-}
-
-.category-filter.active,
-.category-filter:hover {
-    background: linear-gradient(135deg, var(--vibrant-1), var(--vibrant-4));
-    color: var(--white);
-    box-shadow: 0 4px 15px rgba(255, 107, 107, 0.3);
-}
-
 /* Carousel Styles */
 .carousel-container {
     position: relative;
     overflow: hidden;
-    border-radius: var(--radius);
+    border-radius: var(--radius); /* Keeps the rounded corners */
     margin: 0 auto;
 }
 
 .carousel-track {
     display: flex;
     transition: transform 0.5s ease-in-out;
-    gap: 2rem;
 }
 
 .carousel-slide {
-    flex: 0 0 calc(33.333% - 1.33rem);
+    flex: 0 0 100%; /* This is the key change: 1 slide takes 100% width */
     min-width: 0;
+}
+
+/* This styles your new banner images */
+.menu-banner-img {
+    width: 100%;
+    height: auto;
+    display: block; /* Removes any extra space below the image */
+    border-radius: var(--radius); /* Match container's rounded corners */
 }
 
 .carousel-btn {
@@ -809,78 +701,10 @@ body::before {
     background: linear-gradient(135deg, var(--vibrant-1), var(--vibrant-4));
     border-color: var(--vibrant-1);
 }
-
-/* Menu Items */
-.menu-item {
-    padding: 1.5rem;
-    transition: var(--transition);
-    position: relative;
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.1));
-    border: 1px solid rgba(255, 255, 255, 0.2);
-}
-
-.menu-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 
-        0 15px 30px rgba(0, 0, 0, 0.15),
-        0 5px 20px rgba(168, 134, 183, 0.2);
-}
-
-.item-badge {
-    position: absolute;
-    top: 1rem;
-    left: 1rem;
-    background: linear-gradient(135deg, var(--vibrant-1), var(--vibrant-4));
-    color: var(--white);
-    padding: 4px 12px;
-    border-radius: 20px;
-    font-size: 0.8rem;
-    font-weight: 500;
-    z-index: 2;
-    box-shadow: 0 2px 8px rgba(255, 107, 107, 0.3);
-}
-
-.item-badge.new {
-    background: linear-gradient(135deg, var(--vibrant-3), var(--success));
-}
-
-.item-image {
-    height: 120px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 1.5rem;
-}
-
-.image-visual {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 2rem;
-    color: var(--white);
-    box-shadow: var(--glass-shadow);
-}
-
-.item-content h3 {
-    margin-bottom: 0.5rem;
-    color: var(--white);
-}
-
-.item-content p {
-    color: rgba(255, 255, 255, 0.8);
-    margin-bottom: 1rem;
-    font-size: 0.9rem;
-    line-height: 1.5;
-}
-
-.item-footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
+/* =======================================================
+END OF NEW BANNER STYLES
+=======================================================
+*/
 
 /* About Section */
 .about {
@@ -1063,6 +887,12 @@ footer::before {
     align-items: center;
     gap: 12px;
     margin-bottom: 1rem;
+}
+
+/* Footer Logo Fix */
+.footer-logo-img {
+    max-width: 200px;
+    height: auto;
 }
 
 .footer-logo i {
@@ -1267,6 +1097,7 @@ footer::before {
         align-items: center;
     }
     
+    /* This rule is now used for the banner carousel */
     .carousel-slide {
         flex: 0 0 100%;
     }
@@ -1296,8 +1127,7 @@ footer::before {
     }
 }
 
-/* === MODIFIED: STYLES FOR HERO PRODUCT CARD === */
-
+/* Hero Product Card Styles */
 .hero-visual .product-card {
     max-width: 370px; /* Made bigger */
     margin: 0 0 0 auto; /* Aligned to the right */

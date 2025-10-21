@@ -1,4 +1,8 @@
 /* Modern Color Scheme Based on Signature Color #a886b7 */
+/* ADD THIS AT THE VERY TOP of style.css */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+/* Your :root {} styles should come after this */
 :root {
     --primary: #a886b7;
     --primary-light: #c5a9d4;
@@ -1295,4 +1299,103 @@ footer::before {
 
 /* ======================================================= */
 /* END OF NEW CONTACT PAGE STYLES                      */
+/* ======================================================= */
+/* ======================================================= */
+/* REVISED STYLES FOR TEXT-ONLY MENU PAGE                */
+/* ======================================================= */
+
+.menu-page-section {
+    padding: 140px 0 80px; 
+    position: relative;
+    z-index: 1;
+}
+
+/* Category Title Styling */
+.menu-category-title {
+    color: var(--white);
+    font-family: 'Playfair Display', serif; /* Use the elegant font */
+    font-size: 2.2rem; /* Larger size */
+    font-weight: 700;
+    margin-top: 3.5rem; 
+    margin-bottom: 2rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 3px solid var(--primary-light);
+    display: inline-block; 
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+
+/* Grid layout adjustments */
+.menu-grid.text-only-menu {
+    display: grid;
+    /* More columns for text items */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+    gap: 1.5rem; 
+}
+
+/* Styling for text-only menu item cards */
+.menu-item-card.text-only {
+    padding: 1.5rem; /* More padding */
+    display: flex; /* Use flex to align content */
+    flex-direction: column; 
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.03)); /* Slightly less visible */
+    border: 1px solid var(--glass-border);
+    min-height: 180px; /* Ensure cards have some minimum height */
+}
+
+/* REMOVED .menu-item-image and .menu-item-photo styles */
+
+.menu-item-content {
+    display: flex;
+    flex-direction: column;
+    height: 100%; /* Make content fill the card */
+}
+
+/* Item Name Styling */
+.menu-item-content h4 {
+    font-family: 'Playfair Display', serif; /* Use the elegant font */
+    color: var(--white);
+    font-size: 1.35rem; /* Slightly larger */
+    font-weight: 600;
+    margin-bottom: 0.75rem; /* More space below name */
+}
+
+/* Description Styling */
+.menu-item-content .item-description {
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 0.9rem; /* Slightly larger */
+    line-height: 1.5; /* Better readability */
+    margin-bottom: 1.25rem; 
+    flex-grow: 1; /* Pushes footer down */
+}
+
+/* Footer Styling */
+.menu-item-content .item-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto; /* Pushes footer to bottom */
+    border-top: 1px solid rgba(255, 255, 255, 0.1); /* Subtle separator */
+    padding-top: 0.75rem; /* Space above footer */
+}
+
+/* Price Styling */
+.menu-item-content .price {
+    font-size: 1.4rem; 
+    font-weight: 700; /* Bolder price */
+    color: var(--vibrant-2);
+}
+
+/* Button Styling (already defined, but ensure small class works) */
+.add-to-cart.small {
+    padding: 8px 16px;
+    font-size: 0.85rem;
+}
+
+/* Space below the last menu grid */
+.menu-grid:last-of-type {
+    margin-bottom: 2rem;
+}
+
+/* ======================================================= */
+/* END OF REVISED MENU PAGE STYLES                     */
 /* ======================================================= */

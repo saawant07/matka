@@ -1167,3 +1167,132 @@ footer::before {
     font-size: 1.5rem;
     font-weight: 600;
 }
+/* ADD THIS TO THE END OF style.css to make the "Features" section smaller */
+
+/* Reduce padding around the entire section */
+.features {
+    padding: 50px 0; /* Was 80px 0 */
+}
+
+/* Reduce padding inside each feature card */
+.feature-card {
+    padding: 1.5rem 1.25rem; /* Was 2.5rem 2rem */
+}
+
+/* Make the icon smaller */
+.feature-icon {
+    width: 60px; /* Was 80px */
+    height: 60px; /* Was 80px */
+    font-size: 1.5rem; /* Was 2rem */
+    margin: 0 auto 1rem; /* Reduced bottom margin */
+    box-shadow: 0 6px 15px rgba(78, 205, 196, 0.25); /* Adjusted shadow */
+}
+
+/* Reduce space below the heading */
+.feature-card h3 {
+    margin-bottom: 0.5rem; /* Was 1rem */
+    font-size: 1.1rem; /* Optional: Slightly smaller font */
+}
+
+/* Optional: Slightly smaller description text */
+.feature-card p {
+    font-size: 0.9rem; 
+}
+/* Add to your CSS */
+.floating-milkshake {
+    position: absolute;
+    font-size: 2rem;
+    opacity: 0.7;
+    animation: floatUpDown 3s ease-in-out infinite;
+}
+/* ======================================================= */
+/* NEW STYLES FOR CONTACT PAGE (add to end of style.css) */
+/* ======================================================= */
+
+.contact-section {
+    padding: 140px 0 80px; /* Add padding similar to hero section */
+    min-height: calc(100vh - 80px - 200px); /* Adjust to fit between header/footer */
+    display: flex;
+    align-items: center; /* Vertically center content if needed */
+    position: relative;
+    z-index: 1; /* Ensure content is above background elements */
+}
+
+/* Container for the form with glass effect */
+.contact-form-container {
+    max-width: 700px;
+    margin: 2rem auto 0; /* Add margin below the section header */
+    padding: 2.5rem;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+    border: 1px solid var(--glass-border);
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--white);
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+
+.required {
+    color: var(--vibrant-1); /* Red asterisk */
+    margin-left: 2px;
+}
+
+/* Style for input fields and textarea */
+.glass-effect-input {
+    width: 100%;
+    padding: 12px 15px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    color: var(--white);
+    font-size: 1rem;
+    font-family: inherit;
+    transition: var(--transition);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+}
+
+.glass-effect-input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.glass-effect-input:focus {
+    outline: none;
+    border-color: var(--primary-light);
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 0 15px rgba(var(--primary-rgb), 0.2);
+}
+
+.form-textarea {
+    resize: vertical; /* Allow vertical resizing only */
+    min-height: 100px;
+}
+
+.form-submit-btn {
+    display: block; /* Make button full width */
+    width: 100%;
+    margin-top: 1rem;
+    font-size: 1.1rem;
+    padding: 14px 20px;
+}
+
+/* Responsive adjustments for the contact form */
+@media (max-width: 768px) {
+    .contact-form-container {
+        padding: 1.5rem;
+    }
+    .contact-section {
+        padding: 100px 0 60px;
+    }
+}
+
+/* ======================================================= */
+/* END OF NEW CONTACT PAGE STYLES                      */
+/* ======================================================= */

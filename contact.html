@@ -28,6 +28,7 @@
                 <nav class="nav-menu">
                     <a href="index.html#home" class="nav-link">Home</a> 
                     <a href="index.html#menu" class="nav-link">Menu</a>
+                    <a href="reviews.html" class="nav-link">Reviews</a>
                     <a href="index.html#about" class="nav-link">About</a>
                     <a href="contact.html" class="nav-link active">Contact</a> 
                     <a href="#order" class="nav-cta glass-button">Order Now</a> 
@@ -46,39 +47,95 @@
         <div class="container">
             <div class="section-header">
                 <h2>Get In Touch</h2>
-                <p>Have questions or feedback? Fill out the form below!</p>
+                <p>We'd love to hear from you! Visit us or send us a message.</p>
             </div>
             
-            <div class="contact-form-container glass-card">
-                <form id="contactForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST"> 
-                    
-                    <div class="form-group">
-                        <label for="name">Name <span class="required">*</span></label>
-                        <input type="text" id="name" name="name" class="form-input glass-effect-input" required>
+            <!-- Contact Info Cards -->
+            <div class="contact-info-grid">
+                <div class="glass-card contact-info-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-map-marker-alt"></i>
                     </div>
-                    
-                    <div class="form-group">
-                        <label for="number">Phone Number <span class="required">*</span></label>
-                        <input type="tel" id="number" name="number" class="form-input glass-effect-input" required>
+                    <h3>Visit Us</h3>
+                    <p>Ward No.9, Station Feeder Road<br>SMC Stall No.7<br>Opposite Fire Station<br>Siliguri, West Bengal - 734005</p>
+                </div>
+                
+                <div class="glass-card contact-info-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-phone"></i>
                     </div>
+                    <h3>Call Us</h3>
+                    <p><a href="tel:+918927252245">+91 8927252245</a></p>
+                    <p class="small-text">Mon-Sun: 6:00 PM - 11:00 PM</p>
+                </div>
+                
+                <div class="glass-card contact-info-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3>Email Us</h3>
+                    <p><a href="mailto:contact@matkadelights.com">contact@matkadelights.com</a></p>
+                    <p class="small-text">We'll respond within 24 hours</p>
+                </div>
+            </div>
+            
+            <!-- Form and Map Grid -->
+            <div class="contact-content-grid">
+                <!-- Contact Form -->
+                <div class="contact-form-container glass-card">
+                    <h3 class="form-title">Send Us a Message</h3>
+                    <form id="contactForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST"> 
+                        
+                        <div class="form-group">
+                            <label for="name">Name <span class="required">*</span></label>
+                            <input type="text" id="name" name="name" class="form-input glass-effect-input" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="number">Phone Number <span class="required">*</span></label>
+                            <input type="tel" id="number" name="number" class="form-input glass-effect-input" required>
+                        </div>
 
-                    <div class="form-group">
-                        <label for="email">Email (Optional)</label>
-                        <input type="email" id="email" name="email" class="form-input glass-effect-input">
+                        <div class="form-group">
+                            <label for="email">Email (Optional)</label>
+                            <input type="email" id="email" name="email" class="form-input glass-effect-input">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Message <span class="required">*</span></label>
+                            <textarea id="message" name="message" rows="5" class="form-textarea glass-effect-input" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="glass-button primary-btn form-submit-btn">
+                            <i class="fas fa-paper-plane"></i> Send Message
+                        </button>
+                    </form>
+                </div>
+                
+                <!-- Map Container -->
+                <div class="map-container glass-card">
+                    <h3 class="map-title">Find Us Here</h3>
+                    <div class="map-wrapper">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3561.8428965428767!2d88.42841931504!3d26.723607383223!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjbCsDQzJzI1LjAiTiA4OMKwMjUnNDYuMyJF!5e0!3m2!1sen!2sin!4v1234567890"
+                            width="100%" 
+                            height="100%" 
+                            style="border:0; border-radius: 15px;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
                     </div>
-                    
-                    <div class="form-group">
-                        <label for="message">Message <span class="required">*</span></label>
-                        <textarea id="message" name="message" rows="5" class="form-textarea glass-effect-input" required></textarea>
+                    <div class="map-directions">
+                        <a href="https://maps.google.com/?q=Ward+No.9+station+feeder+road+SMC+Stall+No.7+siliguri" target="_blank" class="glass-button secondary-btn">
+                            <i class="fas fa-directions"></i> Get Directions
+                        </a>
                     </div>
-                    
-                    <button type="submit" class="glass-button primary-btn form-submit-btn">
-                        <i class="fas fa-paper-plane"></i> Send Message
-                    </button>
-                </form>
+                </div>
             </div>
         </div>
     </section>
+    
     <footer>
         <div class="container">
             <div class="footer-content">
@@ -88,7 +145,7 @@
                     </div>
                     <p class="footer-description">Crafting exceptional milkshake experiences through tradition, quality, and innovation.</p>
                     <div class="social-links">
-                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.instagram.com/matka_desidelights?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" class="social-link"><i class="fab fa-instagram"></i></a>
                         <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
                         <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
                         <a href="#" class="social-link"><i class="fab fa-whatsapp"></i></a>
@@ -115,8 +172,7 @@
                 <div class="footer-section">
                     <h4>Business Hours</h4>
                     <div class="business-hours">
-                        <p>Monday - Sunday: 10:00 AM - 11:00 PM</p>
-                        <p>Delivery: 10:00 AM - 10:30 PM</p>
+                        <p>Monday - Sunday: 6:00 PM - 11:00 PM</p>
                     </div>
                 </div>
             </div>
@@ -129,24 +185,21 @@
 
     <script>
         // --- Mobile Menu ---
-        // (Copied from index.html - needed for the header)
         document.getElementById('menuToggle').addEventListener('click', function() {
             this.classList.toggle('active');
             document.querySelector('.nav-menu').classList.toggle('active');
         });
 
-        // --- Simple Form Validation Feedback (Optional but helpful) ---
+        // --- Form Validation Feedback ---
         const form = document.getElementById('contactForm');
         form.addEventListener('submit', function(e) {
-            // Basic check - browser handles 'required' validation
             const name = document.getElementById('name').value;
             const number = document.getElementById('number').value;
             const message = document.getElementById('message').value;
 
             if (name && number && message) {
-                // Optionally show a "Sending..." message
-            } else {
-                // Browser should prevent submission, but you could add custom alerts
+                // Show a success message
+                alert('Thank you for your message! We will get back to you soon.');
             }
         });
     </script>

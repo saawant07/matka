@@ -7,18 +7,10 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="/favicon.ico">
 </head>
 <body>
-    <div class="video-intro" id="videoIntro">
-        <video id="introVideo" muted playsinline>
-            <source src="media/intro-video.mp4" type="video/mp4">
-            <source src="media/intro-video.webm" type="video/webm">
-            Your browser does not support the video tag.
-        </video>
-        <button class="skip-btn" id="skipIntro">
-            Skip Intro
-        </button>
-    </div>
 
     <div class="background-elements">
         <div class="bg-circle circle-1"></div>
@@ -39,6 +31,7 @@
                 <nav class="nav-menu">
                     <a href="#home" class="nav-link active">Home</a>
                     <a href="menu.html" class="nav-link">Menu</a>
+                    <a href="reviews.html" class="nav-link">Reviews</a>
                     <a href="#about" class="nav-link">About</a>
                     <a href="contact.html" class="nav-link">Contact</a>
                     <a href="#order" class="nav-cta glass-button">Order Now</a>
@@ -75,15 +68,13 @@
                 </div>
                 
                 <div class="hero-visual">
-                    
                     <div class="glass-card product-card">
                         <div class="product-image-main-container">
                             <img src="media/kitkat.jpg" alt="Kitkat Oreo Shake" class="product-card-img">
                         </div>
-                        <h3 class="product-title"> Kitkat-Oreo Shake</h3>
-                        <p class="product-price">₹120</p>
+                        <h3 class="product-title">Kitkat-Oreo Shake</h3>
+                        <p class="product-price"></p>
                     </div>
-
                 </div>
             </div>
         </div>
@@ -131,8 +122,6 @@
             <div class="carousel-container">
                 <div class="carousel-track" id="carouselTrack">
                     
-                    
-
                     <div class="carousel-slide">
                         <img src="media/vanilla.jpg" alt="Tharkhi Vanilla Banner" class="menu-banner-img">
                     </div>
@@ -219,6 +208,141 @@
         </div>
     </section>
 
+    <!-- NEW: Testimonials Section -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2>What Our Customers Say</h2>
+                <p>Real experiences from real milkshake lovers</p>
+            </div>
+            
+            <div class="testimonials-grid">
+                <div class="glass-card testimonial-card">
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"The KitKat Oreo shake is absolutely divine! The matka serving makes it even more special. Best milkshake in Siliguri!"</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="author-info">
+                            <h4>Priya Sharma</h4>
+                            <p>Regular Customer</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="glass-card testimonial-card">
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"Love the Alphonso mango ice cream! Fresh ingredients and the traditional presentation is a nice touch. Highly recommended!"</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="author-info">
+                            <h4>Rahul Das</h4>
+                            <p>Food Blogger</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="glass-card testimonial-card">
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"The Bahubali shake lives up to its name! Loaded with toppings and incredibly delicious. Perfect for sharing with friends."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="author-info">
+                            <h4>Ananya Roy</h4>
+                            <p>Student</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEW: Process Section -->
+    <section class="process" id="process">
+        <div class="container">
+            <div class="section-header">
+                <h2>Crafted With Care</h2>
+                <p>Our time-honored process ensures every sip is perfection</p>
+            </div>
+            
+            <div class="process-timeline">
+                <div class="process-step glass-card">
+                    <div class="step-number">1</div>
+                    <div class="step-icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h3>Select Fresh Ingredients</h3>
+                    <p>We handpick only the finest, freshest ingredients every morning from trusted local suppliers.</p>
+                </div>
+                
+                <div class="process-connector">
+                    <div class="connector-line"></div>
+                    <i class="fas fa-arrow-right"></i>
+                </div>
+                
+                <div class="process-step glass-card">
+                    <div class="step-number">2</div>
+                    <div class="step-icon">
+                        <i class="fas fa-blender"></i>
+                    </div>
+                    <h3>Blend to Perfection</h3>
+                    <p>Using traditional techniques combined with modern equipment for the perfect consistency and taste.</p>
+                </div>
+                
+                <div class="process-connector">
+                    <div class="connector-line"></div>
+                    <i class="fas fa-arrow-right"></i>
+                </div>
+                
+                <div class="process-step glass-card">
+                    <div class="step-number">3</div>
+                    <div class="step-icon">
+                        <i class="fas fa-wine-glass-alt"></i>
+                    </div>
+                    <h3>Serve in Matka</h3>
+                    <p>Presented in authentic earthen matkas that enhance the flavor and keep it naturally cool.</p>
+                </div>
+                
+                <div class="process-connector">
+                    <div class="connector-line"></div>
+                    <i class="fas fa-arrow-right"></i>
+                </div>
+                
+                <div class="process-step glass-card">
+                    <div class="step-number">4</div>
+                    <div class="step-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3>Enjoy the Experience</h3>
+                    <p>Every shake is crafted with love and delivered fresh to bring joy with every sip.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section class="cta" id="order">
         <div class="container">
             <div class="cta-content glass-card">
@@ -228,14 +352,24 @@
                 <h2>Ready to Experience Perfection?</h2>
                 <p>Place your order now and have our artisanal milkshakes delivered to your doorstep</p>
                 <div class="cta-buttons">
-                    <button class="glass-button primary-btn large">
-                        <i class="fas fa-mobile-alt"></i>
-                        Order via App
-                    </button>
-                    <button class="glass-button secondary-btn large">
+                    <a href="https://wa.me/918927252245?text=Hi!%20I%20would%20like%20to%20order%20from%20Matka%20Desi%20Delights" target="_blank" class="glass-button primary-btn large">
+                        <i class="fab fa-whatsapp"></i>
+                        Order on WhatsApp
+                    </a>
+                    <a href="tel:+918927252245" class="glass-button secondary-btn large">
                         <i class="fas fa-phone"></i>
                         Call to Order
-                    </button>
+                    </a>
+                </div>
+                <div class="cta-info">
+                    <div class="info-item">
+                        <i class="fas fa-clock"></i>
+                        <span>Open: 6:00 PM - 11:00 PM</span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Siliguri, West Bengal</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -302,7 +436,6 @@
 
         function hideIntro() {
             videoIntro.style.display = 'none';
-            // IMPORTANT: Initialize first, then start auto slide
             initCarousel(); 
             startAutoSlide(); 
         }
@@ -314,15 +447,15 @@
         });
 
         // --- Carousel Variables ---
-        let currentSlideIndex = 0; // Represents the *logical* index (0 to N-1)
-        let totalSlides = 0; // The count of *original* slides
-        let slides = []; // Array of actual slide elements
+        let currentSlideIndex = 0;
+        let totalSlides = 0;
+        let slides = [];
         let track = null;
         let indicators = [];
         let autoSlideInterval = null;
         let isCarouselInitialized = false;
-        let slideWidth = 0; // Width of a single slide
-        let isTransitioning = false; // Flag to prevent rapid clicks
+        let slideWidth = 0;
+        let isTransitioning = false;
 
         // --- Carousel Initialization ---
         function initCarousel() {
@@ -335,28 +468,23 @@
 
             if (!track || totalSlides === 0) {
                 console.error("Carousel track not found or no slides.");
-                return; // Exit if no carousel or slides
+                return;
             }
 
             isCarouselInitialized = true;
 
-            // 1. Create clones for infinite loop
             const firstClone = originalSlides[0].cloneNode(true);
             const lastClone = originalSlides[totalSlides - 1].cloneNode(true);
 
-            // 2. Add clones to the track
             track.appendChild(firstClone);
             track.insertBefore(lastClone, originalSlides[0]);
 
-            // 3. Update slides array to include clones
-            slides = Array.from(track.children); // Use Array.from for easier handling
+            slides = Array.from(track.children);
 
-            // 4. Initial setup
-            currentSlideIndex = 0; // Start logically at the first slide
+            currentSlideIndex = 0;
             updateSlideWidth();
-            positionTrackToIndex(currentSlideIndex + 1, false); // Position to the first *real* slide (index 1)
+            positionTrackToIndex(currentSlideIndex + 1, false);
 
-            // 5. Add event listeners
             track.addEventListener('transitionend', handleTransitionEnd);
             document.getElementById('carouselNext').addEventListener('click', handleNextClick);
             document.getElementById('carouselPrev').addEventListener('click', handlePrevClick);
@@ -378,7 +506,6 @@
             window.addEventListener('resize', handleResize);
         }
 
-        // --- Carousel Helper Functions ---
         function updateSlideWidth() {
             if (!isCarouselInitialized) return;
             slideWidth = slides[0].getBoundingClientRect().width;
@@ -386,7 +513,7 @@
 
         function positionTrackToIndex(slideIndex, withTransition = true) {
             if (!isCarouselInitialized) return;
-            updateSlideWidth(); // Recalculate width just in case
+            updateSlideWidth();
             track.style.transition = withTransition ? 'transform 0.5s ease-in-out' : 'none';
             track.style.transform = `translateX(-${slideWidth * slideIndex}px)`;
         }
@@ -397,62 +524,56 @@
             });
         }
 
-        // --- Carousel Event Handlers ---
         function handleNextClick() {
-            if (isTransitioning) return; // Prevent clicking during animation
+            if (isTransitioning) return;
             stopAutoSlide();
             nextSlide();
             startAutoSlide();
         }
 
         function handlePrevClick() {
-            if (isTransitioning) return; // Prevent clicking during animation
+            if (isTransitioning) return;
             stopAutoSlide();
             prevSlide();
             startAutoSlide();
         }
 
-        /** Logic after slide transition finishes - Jumps if on a clone */
         function handleTransitionEnd() {
-            isTransitioning = false; // Allow clicks again
-            const currentTrackIndex = getCurrentTrackIndex(); // Get the index including clones
+            isTransitioning = false;
+            const currentTrackIndex = getCurrentTrackIndex();
 
-            if (currentTrackIndex === 0) { // If landed on the *first* (prepended) clone
-                currentSlideIndex = totalSlides - 1; // Logical index is the last slide
-                positionTrackToIndex(totalSlides, false); // Jump to the *real* last slide
-            } else if (currentTrackIndex === totalSlides + 1) { // If landed on the *last* (appended) clone
-                currentSlideIndex = 0; // Logical index is the first slide
-                positionTrackToIndex(1, false); // Jump to the *real* first slide
+            if (currentTrackIndex === 0) {
+                currentSlideIndex = totalSlides - 1;
+                positionTrackToIndex(totalSlides, false);
+            } else if (currentTrackIndex === totalSlides + 1) {
+                currentSlideIndex = 0;
+                positionTrackToIndex(1, false);
             }
         }
 
         function handleResize() {
             if (!isCarouselInitialized) return;
             updateSlideWidth();
-            positionTrackToIndex(currentSlideIndex + 1, false); // Reposition without transition
+            positionTrackToIndex(currentSlideIndex + 1, false);
         }
 
-        /** Helper to get the current index including clones */
         function getCurrentTrackIndex() {
-            // Very simplified based on currentSlideIndex and totalSlides
-            // Assumes jumps happen correctly in handleTransitionEnd
             return currentSlideIndex + 1; 
         }
 
-        // --- Main Carousel Functions ---
         function nextSlide() {
             if (!isCarouselInitialized || isTransitioning) return;
             isTransitioning = true;
-            currentSlideIndex = (currentSlideIndex + 1) % totalSlides; // Update logical index
-            positionTrackToIndex(getCurrentTrackIndex() + 1, true); // Move track to next position
+            currentSlideIndex = (currentSlideIndex + 1) % totalSlides;
+            positionTrackToIndex(getCurrentTrackIndex() + 1, true);
             updateIndicators(currentSlideIndex);
         }
 
         function prevSlide() {
             if (!isCarouselInitialized || isTransitioning) return;
             isTransitioning = true;
-            currentSlideIndex = (currentSlideIndex - 1 + totalSlides) % totalSlides; // Update logical index
-            positionTrackToIndex(getCurrentTrackIndex() - 1, true); // Move track to previous position
+            currentSlideIndex = (currentSlideIndex - 1 + totalSlides) % totalSlides;
+            positionTrackToIndex(getCurrentTrackIndex() - 1, true);
             updateIndicators(currentSlideIndex);
         }
 
@@ -460,13 +581,13 @@
             if (!isCarouselInitialized || isTransitioning || logicalIndex < 0 || logicalIndex >= totalSlides) return;
             isTransitioning = true;
             currentSlideIndex = logicalIndex;
-            positionTrackToIndex(currentSlideIndex + 1, true); // +1 for prepended clone
+            positionTrackToIndex(currentSlideIndex + 1, true);
             updateIndicators(currentSlideIndex);
         }
 
         function startAutoSlide() {
             if (isCarouselInitialized && totalSlides > 0 && !autoSlideInterval) {
-                autoSlideInterval = setInterval(nextSlide, 5000); // 5 seconds
+                autoSlideInterval = setInterval(nextSlide, 5000);
             }
         }
 
@@ -475,22 +596,12 @@
             autoSlideInterval = null;
         }
 
-        // --- Initialize on Load ---
         window.addEventListener('load', function() {
-            // Only initialize if video isn't playing (or doesn't exist)
             if (!videoIntro || videoIntro.style.display === 'none') {
                  initCarousel();
                  startAutoSlide();
             }
         });
-
-        // --- Other functions (safe to leave) ---
-        // (Menu filtering, Add to cart, Notification, Smooth scroll)
-        document.querySelectorAll('.category-filter').forEach(button => { /* ... */ });
-        document.querySelectorAll('.add-to-cart').forEach(button => { /* ... */ });
-        function showNotification(message) { /* ... */ }
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => { /* ... */ });
-
     </script>
 </body>
 </html>

@@ -9,7 +9,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Video Intro Only -->
     <div class="video-intro" id="videoIntro">
         <video id="introVideo" muted playsinline>
             <source src="media/intro-video.mp4" type="video/mp4">
@@ -21,15 +20,13 @@
         </button>
     </div>
 
-    <!-- Background Elements -->
     <div class="background-elements">
         <div class="bg-circle circle-1"></div>
         <div class="bg-circle circle-2"></div>
         <div class="bg-circle circle-3"></div>
         <div class="bg-circle circle-4"></div>
-    </div>
+        </div>
 
-    <!-- Header -->
     <header class="glass-header">
         <div class="container">
             <div class="header-content">
@@ -56,7 +53,6 @@
         </div>
     </header>
 
-    <!-- Hero Section -->
     <section class="hero" id="home">
         <div class="container">
             <div class="hero-content">
@@ -77,30 +73,22 @@
                         </a>
                     </div>
                 </div>
+                
                 <div class="hero-visual">
-                    <div class="glass-card featured-drink">
-                        <div class="drink-visual">
-                            <div class="milkshake-glass">
-                                <div class="glass-top"></div>
-                                <div class="drink-content" style="background: linear-gradient(to bottom, #FFB347, #FFCC33);"></div>
-                                <div class="glass-bottom"></div>
-                            </div>
-                            <div class="drink-topping">
-                                <i class="fas fa-cookie"></i>
-                            </div>
+                    
+                    <div class="glass-card product-card">
+                        <div class="product-image-main-container">
+                            <img src="media/kitkatoreo.jpg" alt="Kitkat Oreo Shake" class="product-card-img">
                         </div>
-                        <div class="drink-info">
-                            <h3>Signature Mango Delight</h3>
-                            <p>Alphonso mangoes with saffron infusion</p>
-                            <div class="price">₹199</div>
-                        </div>
+                        <h3 class="product-title"> Kitkat-Oreo Shake</h3>
+                        <p class="product-price">₹120</p>
                     </div>
+
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Features -->
     <section class="features">
         <div class="container">
             <div class="section-header">
@@ -133,7 +121,6 @@
         </div>
     </section>
 
-    <!-- Menu Section -->
     <section class="menu-section" id="menu">
         <div class="container">
             <div class="section-header">
@@ -148,10 +135,8 @@
                 <button class="category-filter" data-filter="premium">Premium Selection</button>
             </div>
             
-            <!-- Auto Carousel Container -->
             <div class="carousel-container">
                 <div class="carousel-track" id="carouselTrack">
-                    <!-- Product 1 -->
                     <div class="glass-card menu-item carousel-slide" data-category="fruit premium">
                         <div class="item-badge">Most Popular</div>
                         <div class="item-image">
@@ -172,7 +157,6 @@
                         </div>
                     </div>
 
-                    <!-- Product 2 -->
                     <div class="glass-card menu-item carousel-slide" data-category="fruit">
                         <div class="item-image">
                             <div class="image-visual" style="background: linear-gradient(135deg, #FF6B6B, #FF8E8E);">
@@ -192,7 +176,6 @@
                         </div>
                     </div>
 
-                    <!-- Product 3 -->
                     <div class="glass-card menu-item carousel-slide" data-category="classic">
                         <div class="item-image">
                             <div class="image-visual" style="background: linear-gradient(135deg, #FFA726, #FFB74D);">
@@ -212,7 +195,6 @@
                         </div>
                     </div>
 
-                    <!-- Product 4 -->
                     <div class="glass-card menu-item carousel-slide" data-category="premium">
                         <div class="item-badge new">New</div>
                         <div class="item-image">
@@ -233,7 +215,6 @@
                         </div>
                     </div>
 
-                    <!-- Product 5 -->
                     <div class="glass-card menu-item carousel-slide" data-category="fruit classic">
                         <div class="item-image">
                             <div class="image-visual" style="background: linear-gradient(135deg, #FFF8E1, #FFECB3);">
@@ -253,7 +234,6 @@
                         </div>
                     </div>
 
-                    <!-- Product 6 -->
                     <div class="glass-card menu-item carousel-slide" data-category="classic">
                         <div class="item-image">
                             <div class="image-visual" style="background: linear-gradient(135deg, #F8BBD0, #F48FB1);">
@@ -274,7 +254,6 @@
                     </div>
                 </div>
                 
-                <!-- Carousel Controls -->
                 <button class="carousel-btn carousel-prev" id="carouselPrev">
                     <i class="fas fa-chevron-left"></i>
                 </button>
@@ -282,7 +261,6 @@
                     <i class="fas fa-chevron-right"></i>
                 </button>
                 
-                <!-- Carousel Indicators -->
                 <div class="carousel-indicators" id="carouselIndicators">
                     <button class="indicator active" data-index="0"></button>
                     <button class="indicator" data-index="1"></button>
@@ -295,7 +273,6 @@
         </div>
     </section>
 
-    <!-- About Section -->
     <section class="about" id="about">
         <div class="container">
             <div class="about-content">
@@ -351,7 +328,6 @@
         </div>
     </section>
 
-    <!-- CTA Section -->
     <section class="cta" id="order">
         <div class="container">
             <div class="cta-content glass-card">
@@ -374,7 +350,6 @@
         </div>
     </section>
 
-    <!-- Footer -->
     <footer>
         <div class="container">
             <div class="footer-content">

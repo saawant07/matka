@@ -143,7 +143,7 @@ body::before {
     transform: translateY(-2px);
 }
 
-/* Background Elements */
+/* --- MODIFIED: Background Elements --- */
 .background-elements {
     position: fixed;
     top: 0;
@@ -154,24 +154,26 @@ body::before {
     overflow: hidden;
 }
 
+/* Base style for the new "blobs" */
 .bg-circle {
     position: absolute;
-    border-radius: 50%;
-    background: linear-gradient(135deg, var(--vibrant-1), var(--vibrant-2));
-    opacity: 0.08;
-    animation: float 15s infinite ease-in-out;
-    filter: blur(20px);
+    opacity: 0.8; /* Made them more visible (was 0.08) */
+    animation: float 25s infinite ease-in-out;
+    filter: blur(50px); /* Increased blur to make them softer */
+    z-index: -1;
 }
 
+/* Blob 1 */
 .circle-1 {
     width: 400px;
     height: 400px;
     top: -100px;
     left: -100px;
-    animation-delay: 0s;
     background: linear-gradient(135deg, #FF6B6B, #FF9E6D);
+    border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
 }
 
+/* Blob 2 */
 .circle-2 {
     width: 300px;
     height: 300px;
@@ -179,8 +181,10 @@ body::before {
     right: -50px;
     animation-delay: 3s;
     background: linear-gradient(135deg, #4ECDC4, #06D6A0);
+    border-radius: 60% 40% 30% 70% / 50% 60% 40% 50%;
 }
 
+/* Blob 3 */
 .circle-3 {
     width: 250px;
     height: 250px;
@@ -188,8 +192,10 @@ body::before {
     left: 20%;
     animation-delay: 6s;
     background: linear-gradient(135deg, #FFD166, #FF9E6D);
+    border-radius: 30% 70% 50% 50% / 60% 40% 50% 40%;
 }
 
+/* Blob 4 */
 .circle-4 {
     width: 350px;
     height: 350px;
@@ -197,7 +203,10 @@ body::before {
     right: 10%;
     animation-delay: 9s;
     background: linear-gradient(135deg, #A886B7, #8c6a9c);
+    border-radius: 50% 50% 30% 70% / 40% 60% 30% 60%;
 }
+
+/* --- END OF MODIFIED SECTION --- */
 
 @keyframes float {
     0%, 100% { 
@@ -338,8 +347,10 @@ body::before {
     align-items: center;
     gap: 12px;
 }
+
+/* Header Logo Size */
 .logo-image .logo-img {
-    max-height: 70px;  /* You can adjust this value to make the logo bigger or smaller */
+    max-height: 70px;
     width: auto;
 }
 
@@ -370,21 +381,19 @@ body::before {
     color: rgba(255, 255, 255, 0.8);
 }
 
-/* === START: REPLACE OLD NAV-LINK STYLES WITH THIS === */
-
-/* Style the navigation container as a single bar */
+/* Nav Menu Pill Bar */
 .nav-menu {
     display: flex;
     align-items: center;
     gap: 0.5rem; /* Adjusts space between links */
-    background: rgba(45, 48, 71, 0.25); /* A dark, glassy background that pairs well */
+    background: rgba(45, 48, 71, 0.25); /* A dark, glassy background */
     border: 1px solid var(--glass-border);
     border-radius: 50px; /* This makes the container a "pill" */
     padding: 0.5rem; /* Padding inside the bar */
     transition: var(--transition);
 }
 
-/* Style for individual links inside the bar */
+/* Nav Link Style */
 .nav-link {
     text-decoration: none;
     color: rgba(255, 255, 255, 0.8); /* Make non-active links slightly dimmer */
@@ -396,19 +405,17 @@ body::before {
     background: transparent; /* Remove individual backgrounds by default */
 }
 
-/* On hover, make the text brighter */
+/* Nav Link Hover/Active State */
 .nav-link:hover {
     color: var(--white);
 }
 
-/* The active link gets a solid background inside the main bar */
 .nav-link.active {
-    background: var(--primary-dark); /* Using your theme's dark purple for a perfect match */
+    background: var(--primary-dark); /* Using your theme's dark purple */
     color: var(--white);
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 }
 
-/* === END: REPLACEMENT CODE === */
 .nav-cta {
     background: linear-gradient(135deg, var(--vibrant-1), var(--vibrant-4));
     color: var(--white);
@@ -474,15 +481,13 @@ body::before {
     gap: 4rem;
     align-items: center;
 }
-/* Hero Section Logo Styling */
-.hero-logo {
-    margin-bottom: 1.5rem; /* Adds some space below the logo */
-}
 
+/* Hero Logo Size */
 .hero-logo-img {
-    max-width: 300px; /* This controls the size. Adjust as you see fit. */
+    max-width: 400px;
     width: 100%;
     height: auto;
+    margin-bottom: 1.5rem;
 }
 
 .hero-title {
@@ -515,7 +520,8 @@ body::before {
     margin-bottom: 3rem;
 }
 
-/* Featured Drink */
+/* Featured Drink (Original Placeholder) */
+/* This can be deleted, but is harmless */
 .featured-drink {
     padding: 2rem;
     text-align: center;
@@ -1210,6 +1216,20 @@ footer::before {
         opacity: 0;
         visibility: hidden;
         transition: var(--transition);
+        /* Remove pill bar styles on mobile */
+        background: var(--glass-bg);
+        border-radius: 0;
+        padding: 2rem;
+    }
+
+    .nav-link {
+        padding: 8px 0; /* Adjust padding for mobile */
+        border-radius: 0;
+    }
+    
+    .nav-link.active {
+        background: transparent;
+        color: var(--vibrant-2); /* Revert to a simpler active state */
     }
     
     .nav-menu.active {
@@ -1226,6 +1246,10 @@ footer::before {
     
     .hero-title {
         font-size: 2.5rem;
+    }
+
+    .hero-logo-img {
+        margin: 0 auto 1.5rem;
     }
     
     .hero-buttons {
@@ -1270,4 +1294,46 @@ footer::before {
         font-size: 0.9rem;
         padding: 8px 16px;
     }
+}
+
+/* === MODIFIED: STYLES FOR HERO PRODUCT CARD === */
+
+.hero-visual .product-card {
+    max-width: 370px; /* Made bigger */
+    margin: 0 0 0 auto; /* Aligned to the right */
+    padding: 1rem;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.1));
+    text-align: center;
+}
+
+.product-image-main-container {
+    width: 100%;
+    border-radius: var(--radius);
+    overflow: hidden;
+    margin-bottom: 1rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.product-card-img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.product-card .product-title {
+    color: var(--white);
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.product-card .product-description {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.product-card .product-price {
+    color: var(--vibrant-2);
+    font-size: 1.5rem;
+    font-weight: 600;
 }

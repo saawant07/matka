@@ -147,7 +147,6 @@
                     <button class="indicator active" data-index="0"></button>
                     <button class="indicator" data-index="1"></button>
                     <button class="indicator" data-index="2"></button>
-                    <button class="indicator" data-index="3"></button>
                 </div>
             </div>
         </div>
@@ -208,7 +207,6 @@
         </div>
     </section>
 
-    <!-- NEW: Testimonials Section -->
     <section class="testimonials" id="testimonials">
         <div class="container">
             <div class="section-header">
@@ -280,7 +278,6 @@
         </div>
     </section>
 
-    <!-- NEW: Process Section -->
     <section class="process" id="process">
         <div class="container">
             <div class="section-header">
@@ -422,25 +419,8 @@
     </footer>
 
     <script>
-        // --- Video Intro ---
-        const videoIntro = document.getElementById('videoIntro');
-        const introVideo = document.getElementById('introVideo');
-        const skipIntro = document.getElementById('skipIntro');
-
-        introVideo.play().catch((error) => {
-            console.log('Video play failed:', error);
-            hideIntro(); 
-        });
-        introVideo.addEventListener('ended', hideIntro);
-        skipIntro.addEventListener('click', hideIntro);
-
-        function hideIntro() {
-            videoIntro.style.display = 'none';
-            initCarousel(); 
-            startAutoSlide(); 
-        }
-
         // --- Mobile Menu ---
+        // (This code is correct and will now run because the error is gone)
         document.getElementById('menuToggle').addEventListener('click', function() {
             this.classList.toggle('active');
             document.querySelector('.nav-menu').classList.toggle('active');
@@ -473,6 +453,7 @@
 
             isCarouselInitialized = true;
 
+            // Create clones for infinite loop
             const firstClone = originalSlides[0].cloneNode(true);
             const lastClone = originalSlides[totalSlides - 1].cloneNode(true);
 
@@ -542,6 +523,7 @@
             isTransitioning = false;
             const currentTrackIndex = getCurrentTrackIndex();
 
+            // Check for loop-around
             if (currentTrackIndex === 0) {
                 currentSlideIndex = totalSlides - 1;
                 positionTrackToIndex(totalSlides, false);
@@ -558,14 +540,14 @@
         }
 
         function getCurrentTrackIndex() {
-            return currentSlideIndex + 1; 
+            return currentSlideIndex + 1; // +1 for the prepended clone
         }
 
         function nextSlide() {
             if (!isCarouselInitialized || isTransitioning) return;
             isTransitioning = true;
             currentSlideIndex = (currentSlideIndex + 1) % totalSlides;
-            positionTrackToIndex(getCurrentTrackIndex() + 1, true);
+            positionTrackToIndex(getCurrentTrackIndex() + 1, true); // +1 because we're moving to the *next* slide
             updateIndicators(currentSlideIndex);
         }
 
@@ -573,7 +555,7 @@
             if (!isCarouselInitialized || isTransitioning) return;
             isTransitioning = true;
             currentSlideIndex = (currentSlideIndex - 1 + totalSlides) % totalSlides;
-            positionTrackToIndex(getCurrentTrackIndex() - 1, true);
+            positionTrackToIndex(getCurrentTrackIndex() - 1, true); // -1 because we're moving to the *previous* slide
             updateIndicators(currentSlideIndex);
         }
 
@@ -596,11 +578,10 @@
             autoSlideInterval = null;
         }
 
+        // This listener now correctly initializes the carousel on page load.
         window.addEventListener('load', function() {
-            if (!videoIntro || videoIntro.style.display === 'none') {
-                 initCarousel();
-                 startAutoSlide();
-            }
+             initCarousel();
+             startAutoSlide();
         });
     </script>
 </body>
